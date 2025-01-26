@@ -11,7 +11,7 @@ class KatexGPT {
   }
 
   createCopyEquationButtons() {
-    const equations = Array.from(document.querySelectorAll(".katex"));
+    const equations = Array.from(document.querySelectorAll(".katex:not(.copyable-equation)"));
     equations.forEach(equation => {
       equation.style.cursor = "pointer";
       equation.classList.add("copyable-equation");
